@@ -1,0 +1,58 @@
+// procedure to calculate the dot product of 2 vectors
+PROCEDURE dot_product (VAR v1, VAR v2)          // procedure name and parameters
+
+// declare local variables
+VAR
+    i, ps = INTEGER :=0                                          
+BEGIN
+//check if length of vectors are equal then loop through array elements to multiply and get dot product
+    IF (v1.length == v2.length) THEN
+        FOR i FROM 0 TO v1.length-1 STEP 1  DO
+            ps = ps + v1[i] * v2[i]
+        END_FOR
+    END_IF
+END
+//This algorithm sorts an array by repeatedly taking one element at a time and inserting it into its correct position in the sorted part of the array.
+
+
+
+ALGORITHM Insertion_sort
+VAR
+    
+BEGIN
+    set_instructions
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+procedure insertionSort(arr: array)
+    n := length(arr)
+
+    for i := 1 to n - 1 do
+        insertElement(arr, i)
+
+procedure insertElement(arr: array, currentIndex: integer)
+    key := arr[currentIndex]
+    j := currentIndex - 1
+
+    while j >= 0 and key < arr[j] do
+        arr[j + 1] := arr[j]
+        j := j - 1
+
+    arr[j + 1] := key
